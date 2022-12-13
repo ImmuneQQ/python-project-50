@@ -36,4 +36,4 @@ def generate_string(joint_dict):
                 result_str += f"  - {key}: {first_value}\n"
                 result_str += f"  + {key}: {second_value}\n"
     result_str = "{\n" + result_str + "}"
-    return(result_str)
+    return result_str

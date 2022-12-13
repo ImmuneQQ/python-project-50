@@ -1,9 +1,6 @@
 install:
 	poetry install
 
-build:
-	poetry build
-
 publish:
 	poetry publish --dry-run
 
@@ -20,4 +17,12 @@ test:
 	poetry run pytest
 
 test-cov:
-	poetry run pytest --cov
+	poetry run pytest --cov=gendiff --cov-report xml
+
+selfcheck:
+	poetry check
+
+check: selfcheck test lint
+
+build: check
+	poetry build
