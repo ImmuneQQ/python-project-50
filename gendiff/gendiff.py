@@ -11,6 +11,8 @@ def generate_diff(file_path1, file_path2):
     for key, value in file2.items():
         joint_dict.setdefault(key, [])
         joint_dict[key].append((2, value))
+    if (len(joint_dict) == 0):
+        return ''
     result_str = generate_string(dict(sorted(joint_dict.items())))
     return result_str
 
