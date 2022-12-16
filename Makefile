@@ -8,13 +8,13 @@ package-install:
 	python3 -m pip install --user --force-reinstall dist/*.whl
 
 run:
-	poetry run gendiff 'json/file1.json' 'json/file2.json'
+	poetry run gendiff 'tests/fixtures/json/file3.json' 'tests/fixtures/json/file4.json'
 
 lint:
 	poetry run flake8 gendiff
 
 test:
-	poetry run pytest
+	poetry run pytest -vvvvv
 
 test-coverage:
 	poetry run pytest --cov=gendiff --cov-report xml
