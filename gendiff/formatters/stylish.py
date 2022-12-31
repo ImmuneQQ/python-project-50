@@ -1,7 +1,7 @@
 import itertools
 
 
-def generate_string(diff):
+def stylish(diff):
     if diff == {}:
         return ''
 
