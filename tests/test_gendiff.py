@@ -18,3 +18,7 @@ def test_gendiff_yaml():
 def test_gendiff_plain():
     correct = open('tests/fixtures/results/result_plain.txt', 'r').read()
     assert generate_diff('tests/fixtures/json/file3.json', 'tests/fixtures/json/file4.json', 'plain') == correct
+
+def test_gendiff_json_formatter():
+    correct = open('tests/fixtures/results/result_json.txt', 'r').read()
+    assert generate_diff('tests/fixtures/json/file3.json', 'tests/fixtures/json/file4.json', 'json') == correct
